@@ -36,9 +36,9 @@ class ArticlesController < ApplicationController
     else
       redirect_to root_path
     end
+    @graph = Koala::Facebook::API.new('CAAJCdZCcIipsBAAf4rhtfbZATBBPVnRQfZAHFke7CGFUHOI61brKYPRyXH5ZCZBVhYljofj5O45K4E3R0fTkgfZCF7lDFnFF8Dl2Esf4WgUf034tsMpZCBz7LpzCzPqwqAQ0l6nJOZBukTM3ECpmk34YbZCxwhGRlHdSLPyUcZBSGu6TkZAelOQErDc38aDIKNcdalHn2iw19eUS6szArXulkARzuBASueKTksZD')
+    @graph.put_connections("me", "feed",:subject => @article.article_l10n(I18n.locale).title,:message =>@article.article_l10n(I18n.locale).content, :object => object_url)
   end
-
-
 
   def update
 

@@ -1,7 +1,7 @@
 <%= div_for article do %>
   <div class="hhhh">
     <div class="abc">
-       <%= article.article_l10n(I18n.locale).title %>
+       <%= link_to article.article_l10n(I18n.locale).title, article %>
     </div>
     <span class="ab" >
       <strong> <%= t('Post by') %></strong> <%= article.user.email %>

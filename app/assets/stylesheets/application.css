@@ -11,3 +11,67 @@
  *= require_self
  *= require_tree .
  */
+ #header {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+
+  padding: 15px 0;
+  height: 35px;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+#header .user_bar {
+    float: right;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+}
+textarea#message_area {
+  width: 615px;
+  height: 100px;
+}
+body {
+  width: 620px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #e1e1e1;
+}
+.hhhh {
+  background: none repeat scroll 0 0 #f7f7f7;
+    border: 1px solid #e1e1e1;
+      margin-top: 5px;
+  border-radius: 2px;
+    overflow: hidden;
+}
+.hhhh .abc {
+  float: left;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 6px 0 5px 4px;
+}
+.hhhh .ab {
+  float: right;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 7px 10px 0 0;
+
+}
+.min {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 1px solid #e1e1e1;
+  overflow: hidden;
+  padding: 5px;
+  border-top: none;
+}
+
+#field {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
