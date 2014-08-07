@@ -1,0 +1,8 @@
+<p>
+  Tieu de <%= f.object.display_name %> <br />
+  <%= f.text_field :title %><br />
+  Noi dung <%= f.object.display_name %><br />
+  <%= f.text_area :content, :id => "message_area" %><br />
+  <%= f.hidden_field :language_code, :value => f.object.language_code %>
+</p>
+

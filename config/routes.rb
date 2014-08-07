@@ -1,11 +1,12 @@
 Blog::Application.routes.draw do
 
-  devise_for :users
+  resources :article_l10ns
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :dashboard
-  root to: "home#index"
-  resources :articles do
-    resources :comments
-  end
+  root to: "articles#index"
+  resources :articles
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

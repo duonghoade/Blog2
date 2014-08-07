@@ -1,0 +1,2 @@
+module ArticleL10nsHelper
+end

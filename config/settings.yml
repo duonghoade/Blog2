@@ -1,0 +1,8 @@
+locale:
+  languages:
+    - code: EN
+      display_name: 'English'
+    - code: VN
+      display_name: 'VietNam'
+    - code: JP
+      display_name: '日本語'

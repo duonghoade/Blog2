@@ -1,0 +1,19 @@
+<%= div_for article do %>
+  <div class="hhhh">
+    <div class="abc">
+       <%= article.article_l10n(I18n.locale).title %>
+    </div>
+    <span class="ab" >
+      <strong> <%= t('Post by') %></strong> <%= article.user.email %>
+      <% if article.owned_by? current_user %>
+        <%= link_to t("Edit"), edit_article_path(article) %>
+        <%= link_to t("Delete"), article, confirm: "Are you sure?", method: :delete %>
+      <% end %>
+    </span>
+  </div>
+
+  <div class ="min">
+    <%= article.article_l10n(I18n.locale).content %>
+    <br />
+  </div>
+<% end %>

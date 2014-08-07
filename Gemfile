@@ -8,6 +8,9 @@ gem 'sqlite3'
 
 gem 'sunspot_rails'
 gem 'devise'
+gem "rails_config"
+gem 'omniauth-facebook'
+gem "koala", "~> 1.10.0rc"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

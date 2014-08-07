@@ -1,27 +1,5 @@
-<h1>Search the Posts</h1>
-<%= form_tag articles_path, :method => 'get' do  %>
-<p>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search", :name => nil %>
-<%= link_to 'Show all Posts', articles_path %></p>
-<% end %>
+ <%= render @articles %>
+</div>
 
-<div style:'float:right'>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr> 
-<% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.text %></td>
-    <td><%= link_to 'Show', article_path(article) %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-     <td><%= link_to 'Destroy', article_path(article),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table></div>
-<%= link_to 'New article', new_article_path %>
+
+

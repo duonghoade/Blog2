@@ -11,13 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603184204) do
+ActiveRecord::Schema.define(version: 20140807021215) do
+
+  create_table "adds", force: true do |t|
+    t.string   "user_id"
+    t.string   "to"
+    t.string   "article"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "article_l10ns", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "language_code"
+    t.string   "display_name"
+    t.integer  "article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "comments", force: true do |t|
@@ -43,7 +62,9 @@ ActiveRecord::Schema.define(version: 20140603184204) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
